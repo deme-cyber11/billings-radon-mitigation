@@ -6,108 +6,108 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/about</loc>
+    <loc>https://billingsradon.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://billingsradon.com/faq</loc>
+    <loc>https://billingsradon.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/privacy-policy</loc>
+    <loc>https://billingsradon.com/faq/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://billingsradon.com/privacy-policy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/terms-of-service</loc>
+    <loc>https://billingsradon.com/terms-of-service/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/radon-testing</loc>
+    <loc>https://billingsradon.com/services/radon-testing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/radon-mitigation</loc>
+    <loc>https://billingsradon.com/services/radon-mitigation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/radon-system-installation</loc>
+    <loc>https://billingsradon.com/services/radon-system-installation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/sub-slab-depressurization</loc>
+    <loc>https://billingsradon.com/services/sub-slab-depressurization/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/radon-fan-replacement</loc>
+    <loc>https://billingsradon.com/services/radon-fan-replacement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/services/post-mitigation-testing</loc>
+    <loc>https://billingsradon.com/services/post-mitigation-testing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/billings</loc>
+    <loc>https://billingsradon.com/locations/billings/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/laurel</loc>
+    <loc>https://billingsradon.com/locations/laurel/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/lockwood</loc>
+    <loc>https://billingsradon.com/locations/lockwood/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/shepherd</loc>
+    <loc>https://billingsradon.com/locations/shepherd/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/park-city</loc>
+    <loc>https://billingsradon.com/locations/park-city/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/columbus</loc>
+    <loc>https://billingsradon.com/locations/columbus/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/red-lodge</loc>
+    <loc>https://billingsradon.com/locations/red-lodge/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/hardin</loc>
+    <loc>https://billingsradon.com/locations/hardin/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/roundup</loc>
+    <loc>https://billingsradon.com/locations/roundup/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://billingsradon.com/locations/miles-city</loc>
+    <loc>https://billingsradon.com/locations/miles-city/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
