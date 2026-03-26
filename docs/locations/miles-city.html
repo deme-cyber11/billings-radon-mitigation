@@ -322,7 +322,12 @@ body{padding-bottom:56px}
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Tell us about your radon concern..."></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center"><i class="ph ph-paper-plane-tilt"></i> Send Request</button>
+      
+                            <div class="form-group">
+                                <label for="address">Service Address *</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Main St, City, State">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center"><i class="ph ph-paper-plane-tilt"></i> Send Request</button>
     </form>
   </div>
 </div>
