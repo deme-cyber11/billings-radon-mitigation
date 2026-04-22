@@ -70,7 +70,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
     var status=document.getElementById('formStatus');
     btn.disabled=true;
     btn.innerHTML='<i class="ph ph-spinner"></i> Sending...';
-    fetch('https://api.web3forms.com/submit',{
+    fetch('https://lead-manager-api.irontigerdigital.workers.dev/ingest',{
       method:'POST',
       body:new FormData(form)
     }).then(function(r){return r.json()}).then(function(d){
