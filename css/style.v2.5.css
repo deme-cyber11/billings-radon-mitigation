@@ -2007,3 +2007,17 @@ section[style*="--color-white"] .section-subtitle { color: var(--color-text-ligh
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.9375rem;
 }
+
+/* ===== V2.5 REGRESSION FIXES ===== */
+/* .main-nav ul { display:flex } has specificity (0,1,1) which beats
+   .dropdown-menu { display:none } at (0,1,0) — dropdowns always show */
+.main-nav .dropdown-menu { display: none !important; }
+.main-nav .dropdown:hover .dropdown-menu,
+.main-nav .dropdown.open .dropdown-menu { display: block !important; }
+/* Prevent last-column dropdowns from overflowing right viewport edge */
+.main-nav .dropdown:nth-last-child(-n+3) .dropdown-menu { left: auto; right: 0; }
+/* a[href^="tel"] { display:inline-flex } at max-width:991px has higher specificity
+   than .header-phone { display:none } — phone shows on mobile nav */
+@media (max-width: 991px) {
+  a.header-phone { display: none !important; }
+}
