@@ -1,3 +1,45 @@
 User-agent: *
 Allow: /
 Sitemap: https://rimrockradon.com/sitemap.xml
+
+# AI Bot Access (ai-geo-retrofit)
+# Allow retrieval and training crawlers used by AI search engines.
+# These drive citations and `referer: chatgpt.com` traffic — do not block.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bravebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
