@@ -60,37 +60,5 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   els.forEach(function(el){obs.observe(el)});
 })();
 
-/* ===== Contact Form (Web3Forms AJAX) ===== */
-(function(){
-  var form=document.getElementById('contactForm');
-  if(!form)return;
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var btn=form.querySelector('button[type="submit"]');
-    var status=document.getElementById('formStatus');
-    btn.disabled=true;
-    btn.innerHTML='<i class="ph ph-spinner"></i> Sending...';
-    fetch('https://lead-manager-api.irontigerdigital.workers.dev/ingest',{
-      method:'POST',
-      body:new FormData(form)
-    }).then(function(r){return r.json()}).then(function(d){
-      if(d.success){
-        status.className='form-status success';
-        status.textContent='Thank you! We\u2019ll be in touch shortly.';
-        status.style.display='block';
-        form.reset();
-      }else{
-        status.className='form-status error';
-        status.textContent='Something went wrong. Please call us instead.';
-        status.style.display='block';
-      }
-    }).catch(function(){
-      status.className='form-status error';
-      status.textContent='Something went wrong. Please call us instead.';
-      status.style.display='block';
-    }).finally(function(){
-      btn.disabled=false;
-      btn.innerHTML='<i class="ph ph-paper-plane-tilt"></i> Send Request';
-    });
-  });
-})();
+/* Lead-form submission is handled by /js/form.js (shared ITD handler). */
+
