@@ -1,0 +1,69 @@
+/* rimrockradon.com modern layer (2026-10-01). Loads LAST, every rule scoped under body.dm.
+   Keeps the palette (navy #1a3a5c, green accent) and fonts (Space Grotesk / DM Sans). Fixes the
+   v2.5 retrofit breadcrumb (a 120px empty dark box with dark-on-dark links on every inner page),
+   fade-up sections that stayed invisible, an 800px photo inside every inner headline band and
+   paragraphs with no spacing; adds a photo hero card, section rules and a photo CTA band. */
+:root { --dm-navy: #1a3a5c; --dm-navy-2: #10263d; --dm-green: #22a447; --dm-green-ink: #157f33; --dm-ink: #14273b; --dm-muted: #4f6072;
+  --dm-line: #e2e8f0; --dm-soft: #f4f7fa; --dm-radius: 18px; --dm-shadow: 0 10px 30px rgba(16,38,61,.08); --dm-shadow-lg: 0 20px 50px rgba(16,38,61,.16); }
+body.dm { font-size: 17px; line-height: 1.7; }
+body.dm .dm-i { width: 1.05em; height: 1.05em; vertical-align: -.16em; display: inline-block; flex-shrink: 0; }
+
+/* content is always visible (fade-up waited on an observer the audit never tripped: 33 blank bands) */
+body.dm .fade-up { opacity: 1 !important; transform: none !important; }
+
+/* breadcrumb: light bar instead of a 120px dark box */
+body.dm nav.breadcrumb { padding: 12px 0 !important; background: #fff !important; border-bottom: 1px solid var(--dm-line); }
+body.dm nav.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; font-size: .88rem; }
+body.dm nav.breadcrumb a, body.dm nav.breadcrumb a span { color: var(--dm-navy) !important; font-weight: 600; }
+body.dm nav.breadcrumb li span { color: var(--dm-muted); }
+
+/* rhythm + type */
+body.dm section p + p, body.dm .content-main p + p, body.dm .page-content p + p { margin-top: 1rem; }
+body.dm .section h2, body.dm .page-content h2, body.dm section > .container > h2 { font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.15; letter-spacing: -.02em; }
+body.dm .content-main h2, body.dm .page-content .container > h2 { margin-top: 44px; }
+body.dm .content-main h2:first-child { margin-top: 0; }
+body.dm .content-main h2::after, body.dm .section-heading h2::after { content: ""; display: block; width: 44px; height: 4px; border-radius: 4px; background: var(--dm-green); margin-top: 14px; }
+body.dm .section-heading h2::after { margin-left: auto; margin-right: auto; }
+
+/* inner page hero: left-aligned headline beside a framed photo */
+body.dm .page-hero { text-align: left; padding: clamp(56px, 7vw, 96px) 0 !important; background: radial-gradient(900px 400px at 90% 10%, rgba(34,164,71,.14), transparent 60%), linear-gradient(135deg, #10263d 0%, #1a3a5c 100%) !important; }
+body.dm .page-hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.08; letter-spacing: -.02em; color: #fff; }
+body.dm .page-hero p { margin: 0; max-width: 620px; color: rgba(255,255,255,.88); opacity: 1; }
+body.dm .page-hero.dm-has-photo .container { display: grid; grid-template-columns: 1.1fr .9fr; column-gap: 56px; align-items: center; }
+body.dm .page-hero.dm-has-photo .container > :not(.dm-hero-photo) { grid-column: 1; }
+body.dm .dm-hero-photo { grid-column: 2; grid-row: 1 / span 3; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; margin: 0; box-shadow: 0 30px 60px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.12); }
+
+/* home hero slider */
+body.dm .ba-slider, body.dm .before-after-slider { border-radius: 22px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+
+/* cards */
+body.dm .service-card, body.dm .testimonial-card { border-radius: var(--dm-radius); box-shadow: var(--dm-shadow); border: 1px solid var(--dm-line); }
+body.dm .service-card:hover { box-shadow: var(--dm-shadow-lg); }
+body.dm .sidebar-card, body.dm .content-sidebar > div { border-radius: var(--dm-radius); }
+
+/* CTA band with a real photo */
+body.dm .cta-banner, body.dm .cta-section { background: linear-gradient(rgba(16,38,61,.86), rgba(16,38,61,.9)), url("/images/niche-2.jpg") center / cover !important; padding: clamp(72px, 9vw, 112px) 0 !important; }
+body.dm .cta-banner h2, body.dm .cta-section h2 { color: #fff; font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+
+@media (max-width: 900px) {
+  body.dm .page-hero.dm-has-photo .container { grid-template-columns: 1fr; }
+  body.dm .dm-hero-photo { grid-column: 1; grid-row: auto; margin: 24px 0 0; aspect-ratio: 16 / 10; }
+}
+@media (max-width: 640px) { body.dm { font-size: 16px; } body.dm .page-hero { padding: 40px 0 32px !important; } }
+@media (prefers-reduced-motion: reduce) { body.dm * { transition: none !important; } }
+body.dm .contact-section { padding: clamp(56px, 7vw, 96px) 0 !important; background: var(--dm-soft); }
+body.dm .contact-section .contact-form { background: #fff; border: 1px solid var(--dm-line); border-radius: 20px; padding: 32px !important; box-shadow: var(--dm-shadow-lg); }
+body.dm .contact-detail { display: flex; align-items: center; gap: 10px; margin: 10px 0; }
+body.dm .contact-detail i { color: var(--dm-green-ink); }
+body.dm .benefits-list li::before { display: none !important; content: none !important; }
+body.dm .benefits-list li { display: flex; align-items: center; gap: 10px; padding-left: 0 !important; }
+body.dm .benefits-list li i { color: var(--dm-green-ink); font-size: 1.2em; }
+/* blog post: tighter article padding (290-340px blank bands above and below) */
+body.dm-blogpost article.section { padding: 48px 0 56px !important; }
+body.dm-blogpost article.section > .container > div:last-child { margin-bottom: 0 !important; }
+body.dm .contact-form .btn-full { margin-bottom: 0; }
+@media (max-width: 640px) { body.dm .section { padding-top: 48px !important; padding-bottom: 48px !important; } }
+body.dm-blogpost article.section { padding-bottom: 16px !important; }
+body.dm-blogpost article.section > .container > div[style*="text-align:center"] { margin-bottom: 24px !important; }
+@media (max-width: 640px) { body.dm-blogpost article.section > .container > div[style*="text-align:center"] { padding: 32px 22px !important; margin-bottom: 8px !important; } body.dm-blogpost .site-footer { padding-top: 40px; } }
+@media (max-width: 640px) { body.dm .trust-grid { display: grid !important; grid-template-columns: 1fr 1fr; gap: 12px 10px; } body.dm .trust-item { justify-content: flex-start; white-space: nowrap; font-size: .9rem; } }
