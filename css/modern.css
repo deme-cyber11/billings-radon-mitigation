@@ -123,3 +123,19 @@ body.dm .hero .btn--ghost { background: transparent; color: #fff; border: 2px so
   body.dm .error-content, body.dm .thank-you-content { padding: 8px 0 !important; }
   body.dm .thank-you-content > a:not(.btn) { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; }
 }
+
+/* Design check 2026-10-07: content headings had zero margins, so text ran together on location, about and home sections */
+body.dm :is(.section, .content-section) > .container > :is(h2, h3),
+body.dm .content-narrow > :is(h2, h3),
+body.dm .section-header > h2 { margin-bottom: .75rem; }
+body.dm :is(.section, .content-section) > .container > :is(p, ul, ol) + :is(h2, h3),
+body.dm .content-narrow > :is(p, ul, ol) + :is(h2, h3) { margin-top: 2rem; }
+body.dm :is(.section, .content-section) > .container > p + :is(p, ul) { margin-top: 1rem; }
+/* Lead forms: the v2.5 section rule gave the form card 64px top padding and none at the sides */
+body.dm form.contact-form { padding: 32px 28px !important; }
+@media (max-width: 640px) { body.dm form.contact-form { padding: 24px 18px !important; } }
+/* FAQ page: the always-open questions had no padding inside their cards */
+body.dm .faq-item > h3 { margin: 0; padding: 20px 24px 8px; }
+body.dm .faq-item > h3 + p { margin: 0; padding: 0 24px 22px; }
+/* 404: the two buttons touched when they wrapped on phones */
+body.dm .error-content .btn { margin: 6px; }
